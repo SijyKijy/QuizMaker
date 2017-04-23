@@ -1,7 +1,8 @@
 ﻿namespace QuizMaker
 {
-    partial class Form1
+    partial class CreateQuiz
     {
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -18,6 +19,7 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
+            
         }
 
         #region Windows Form Designer generated code
@@ -30,13 +32,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // CreateQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 421);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(532, 361);
+            this.Name = "CreateQuiz";
+            this.Text = "Создать викторину";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateQuiz_FormClosed);
             this.ResumeLayout(false);
 
         }
@@ -44,4 +47,3 @@
         #endregion
     }
 }
-

@@ -12,9 +12,11 @@ namespace QuizMaker
 {
     public partial class CreateQuiz : Form
     {
-        public CreateQuiz()
+        Greeting greeting;
+        public CreateQuiz(Greeting greeting)
         {
             InitializeComponent();
+            this.greeting = greeting;
         }
 
         private void CreateQuiz_FormClosed(object sender, FormClosedEventArgs e)
@@ -22,5 +24,10 @@ namespace QuizMaker
             Application.Exit(); 
         }
 
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            greeting.Show();
+            this.Hide();
+        }
     }
 }

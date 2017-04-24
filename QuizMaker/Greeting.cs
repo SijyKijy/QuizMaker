@@ -12,27 +12,25 @@ namespace QuizMaker
 {
     public partial class Greeting : Form
     {
-        Form f;
-        
         public Greeting()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void GoQuizButton_Click(object sender, EventArgs e)
         {
-            f = new PassQuiz();
+            Form f = new PassQuiz(this);
             f.Show();
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CreateQuizButto_Click(object sender, EventArgs e)
         {
-            f = new CreateQuiz();
+            Form f = new CreateQuiz(this);
             f.Show();
             this.Hide();
         }
 
-        
+   
     }
 }

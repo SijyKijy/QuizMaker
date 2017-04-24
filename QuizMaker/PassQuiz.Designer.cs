@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(397, 426);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 1;
+            this.BackButton.Text = "Назад";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // PassQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 314);
+            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.BackButton);
             this.Name = "PassQuiz";
             this.Text = "Пройти викторину";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PassQuiz_FormClosed);
@@ -43,5 +55,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button BackButton;
     }
 }

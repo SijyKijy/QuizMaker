@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.CreateQuizButton = new System.Windows.Forms.Button();
+            this.GoQuizButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // CreateQuizButton
             // 
-            this.button1.Location = new System.Drawing.Point(239, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Создать викторину";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.CreateQuizButton.Location = new System.Drawing.Point(239, 285);
+            this.CreateQuizButton.Name = "CreateQuizButton";
+            this.CreateQuizButton.Size = new System.Drawing.Size(171, 40);
+            this.CreateQuizButton.TabIndex = 0;
+            this.CreateQuizButton.Text = "Создать викторину";
+            this.CreateQuizButton.UseVisualStyleBackColor = true;
+            this.CreateQuizButton.Click += new System.EventHandler(this.CreateQuizButto_Click);
             // 
-            // button2
+            // GoQuizButton
             // 
-            this.button2.Location = new System.Drawing.Point(239, 360);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Пройти викторину";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.GoQuizButton.Location = new System.Drawing.Point(239, 360);
+            this.GoQuizButton.Name = "GoQuizButton";
+            this.GoQuizButton.Size = new System.Drawing.Size(171, 40);
+            this.GoQuizButton.TabIndex = 1;
+            this.GoQuizButton.Text = "Пройти викторину";
+            this.GoQuizButton.UseVisualStyleBackColor = true;
+            this.GoQuizButton.Click += new System.EventHandler(this.GoQuizButton_Click);
             // 
             // pictureBox1
             // 
@@ -69,8 +69,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 460);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.GoQuizButton);
+            this.Controls.Add(this.CreateQuizButton);
             this.Name = "Greeting";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -80,8 +80,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CreateQuizButton;
+        private System.Windows.Forms.Button GoQuizButton;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

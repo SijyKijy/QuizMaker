@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 460);
+            this.ClientSize = new System.Drawing.Size(651, 463);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GoQuizButton);
             this.Controls.Add(this.CreateQuizButton);

@@ -1,6 +1,6 @@
 ﻿namespace QuizMaker
 {
-    partial class Form1
+    partial class PassQuiz
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // PassQuiz
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "PassQuiz";
+            this.Text = "Пройти викторину";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PassQuiz_FormClosed);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace QuizMaker
 {
-    public partial class Form1 : Form
+    public partial class PassQuiz : Form
     {
-        public Form1()
+        Greeting greeting;
+        public PassQuiz(Greeting greeting)
         {
             InitializeComponent();
+            this.greeting = greeting;
+        }
+        private void PassQuiz_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            greeting.Show();
         }
     }
 }

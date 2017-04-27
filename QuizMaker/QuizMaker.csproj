@@ -57,6 +57,7 @@
     <Compile Include="Greeting.Designer.cs">
       <DependentUpon>Greeting.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputBoxClass.cs" />
     <Compile Include="PassQuiz.cs">
       <SubType>Form</SubType>
     </Compile>

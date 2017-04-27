@@ -81,7 +81,7 @@
             // 
             // makeQuizButton
             // 
-            this.makeQuizButton.Location = new System.Drawing.Point(45, 282);
+            this.makeQuizButton.Location = new System.Drawing.Point(23, 282);
             this.makeQuizButton.Name = "makeQuizButton";
             this.makeQuizButton.Size = new System.Drawing.Size(75, 23);
             this.makeQuizButton.TabIndex = 7;
@@ -137,12 +137,13 @@
             // AddQuiz
             // 
             this.AddQuiz.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.AddQuiz.Location = new System.Drawing.Point(199, 252);
+            this.AddQuiz.Location = new System.Drawing.Point(382, 282);
             this.AddQuiz.Name = "AddQuiz";
             this.AddQuiz.Size = new System.Drawing.Size(79, 23);
             this.AddQuiz.TabIndex = 13;
             this.AddQuiz.Text = "Добавить";
             this.AddQuiz.UseVisualStyleBackColor = true;
+            this.AddQuiz.Click += new System.EventHandler(this.AddQuiz_Click);
             // 
             // CreateQuiz
             // 
@@ -168,6 +169,7 @@
             this.Name = "CreateQuiz";
             this.Text = "Создать викторину";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateQuiz_FormClosed);
+            this.Load += new System.EventHandler(this.CreateQuiz_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

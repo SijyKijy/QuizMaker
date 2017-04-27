@@ -18,16 +18,9 @@ namespace QuizMaker
             InitializeComponent();
             this.greeting = greeting;
         }
-
         private void PassQuiz_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
             greeting.Show();
-            this.Close();
         }
     }
 }

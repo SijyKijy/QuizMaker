@@ -12,6 +12,7 @@ namespace QuizMaker
 {
     public partial class Greeting : Form
     {
+        public int kek = 1;
         public Greeting()
         {
             InitializeComponent();

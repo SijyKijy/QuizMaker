@@ -71,6 +71,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GoQuizButton);
             this.Controls.Add(this.CreateQuizButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Greeting";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

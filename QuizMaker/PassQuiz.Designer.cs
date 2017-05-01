@@ -34,7 +34,6 @@
             this.Q2Label = new System.Windows.Forms.Label();
             this.Q3Label = new System.Windows.Forms.Label();
             this.Q4Label = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ThemeLabel
@@ -54,6 +53,7 @@
             this.OkButton.TabIndex = 1;
             this.OkButton.Text = "Ok";
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // Q1Label
             // 
@@ -91,22 +91,11 @@
             this.Q4Label.TabIndex = 5;
             this.Q4Label.Text = "Ответ4";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(340, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // PassQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Q4Label);
             this.Controls.Add(this.Q3Label);
             this.Controls.Add(this.Q2Label);
@@ -119,6 +108,7 @@
             this.Name = "PassQuiz";
             this.Text = "Пройти викторину";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PassQuiz_FormClosed);
+            this.Load += new System.EventHandler(this.PassQuiz_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +122,5 @@
         private System.Windows.Forms.Label Q2Label;
         private System.Windows.Forms.Label Q3Label;
         private System.Windows.Forms.Label Q4Label;
-        private System.Windows.Forms.Button button1;
     }
 }

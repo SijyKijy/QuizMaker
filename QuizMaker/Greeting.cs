@@ -20,9 +20,16 @@ namespace QuizMaker
 
         private void GoQuizButton_Click(object sender, EventArgs e)
         {
-            Form f = new PassQuiz(this);
-            f.Show();
-            this.Hide();
+            
+            OpenFileDialog Ofd = new OpenFileDialog { Filter = "Текстовые файлы|*.txt" };
+            Ofd.ShowDialog();
+            PassQuiz.path = Ofd.FileName;
+            if(Ofd.FileName != null)
+            {
+                Form f = new PassQuiz(this);
+                f.Show();
+                this.Hide();
+            }
         }
 
         private void CreateQuizButto_Click(object sender, EventArgs e)

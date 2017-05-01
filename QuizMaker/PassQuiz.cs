@@ -14,7 +14,8 @@ namespace QuizMaker
     public partial class PassQuiz : Form
     {
         Greeting greeting;
-        //string path = @"c:\Quiz\Quiz.txt";
+        public static string path = @"";
+        int counter = 1;
 
         public PassQuiz(Greeting greeting)
         {
@@ -24,52 +25,58 @@ namespace QuizMaker
         private void PassQuiz_FormClosed(object sender, FormClosedEventArgs e)
         {
             greeting.Show();
+        }   
+
+        private void PassQuiz_Load(object sender, EventArgs e)
+        {
+            QuestionLoader(1);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void OkButton_Click(object sender, EventArgs e)
         {
-            string value = "Test";
-            if (InputBoxClass.InputBox("Название викторины", "Введите название викторины:", ref value) == DialogResult.OK)
-            {
-                string path = @"c:\Quiz\" + value + ".txt";
-                StreamReader reader = new StreamReader(path);
-                while (!reader.EndOfStream)
-                {
-                    //str += reader.ReadLine();
-                    string s_line = reader.ReadLine();
-                    if (s_line.StartsWith("?"))
-                    {
-                        s_line = s_line.Substring(1);
-                        ThemeLabel.Text = s_line;
-                    }
-                    else if (s_line.StartsWith("1!"))
-                    {
-                        s_line = s_line.Substring(2);
-                        Q1Label.Text = s_line;
-                    }
-                    else if (s_line.StartsWith("2!"))
-                    {
-                        s_line = s_line.Substring(2);
-                        Q2Label.Text = s_line;
-                    }
-                    else if (s_line.StartsWith("3!"))
-                    {
-                        s_line = s_line.Substring(2);
-                        Q3Label.Text = s_line;
-                    }
-                    else if (s_line.StartsWith("4!"))
-                    {
-                        s_line = s_line.Substring(2);
-                        Q4Label.Text = s_line;
-                    }
-                    else if (s_line.StartsWith("*!"))
-                    {
+            QuestionLoader(counter);
+            counter++;
+        }
 
-                    }
-                    else if (s_line.StartsWith("==="))
-                    {
-                        Console.WriteLine("STOOOOOOP!");
-                    }
+        private void QuestionLoader(int i)
+        {
+            StreamReader reader = new StreamReader(path);
+            while (!reader.EndOfStream)
+            {
+                //str += reader.ReadLine();
+                string s_line = reader.ReadLine();
+                if (s_line.StartsWith("?"))
+                {
+                    s_line = s_line.Substring(1);
+                    ThemeLabel.Text = s_line;
+                }
+                else if (s_line.StartsWith("1!"))
+                {
+                    s_line = s_line.Substring(2);
+                    Q1Label.Text = s_line;
+                }
+                else if (s_line.StartsWith("2!"))
+                {
+                    s_line = s_line.Substring(2);
+                    Q2Label.Text = s_line;
+                }
+                else if (s_line.StartsWith("3!"))
+                {
+                    s_line = s_line.Substring(2);
+                    Q3Label.Text = s_line;
+                }
+                else if (s_line.StartsWith("4!"))
+                {
+                    s_line = s_line.Substring(2);
+                    Q4Label.Text = s_line;
+                }
+                else if (s_line.StartsWith("*!"))
+                {
+
+                }
+                else if (s_line.StartsWith("==="))
+                {
+                    Console.WriteLine("STOOOOOOP!");
                 }
             }
         }

@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="CreateQuiz.cs">
       <SubType>Form</SubType>
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
     </Compile>
     <Compile Include="CreateQuiz.Designer.cs">
       <DependentUpon>CreateQuiz.cs</DependentUpon>

@@ -92,12 +92,12 @@ namespace QuizMaker
             // Добавление текста.
             using (StreamWriter sw = File.AppendText(path))
             {
-                sw.WriteLine("T!" + topic.Text);
-                sw.WriteLine("Q1!" + choice1.Text);
-                sw.WriteLine("Q2!" + choice2.Text);
-                sw.WriteLine("Q3!" + choice3.Text);
-                sw.WriteLine("Q4!" + choice4.Text);
-                sw.WriteLine("A!" + GetResult());
+                sw.WriteLine("?" + topic.Text);
+                sw.WriteLine("1!" + choice1.Text);
+                sw.WriteLine("2!" + choice2.Text);
+                sw.WriteLine("3!" + choice3.Text);
+                sw.WriteLine("4!" + choice4.Text);
+                sw.WriteLine("*!" + GetResult());
                 sw.WriteLine("===\n");
                 topic.Clear();
                 choice1.Clear();

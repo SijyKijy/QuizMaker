@@ -28,13 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ThemeLabel = new System.Windows.Forms.Label();
+            this.OkButton = new System.Windows.Forms.Button();
+            this.Q1Label = new System.Windows.Forms.Label();
+            this.Q2Label = new System.Windows.Forms.Label();
+            this.Q3Label = new System.Windows.Forms.Label();
+            this.Q4Label = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // ThemeLabel
+            // 
+            this.ThemeLabel.AutoSize = true;
+            this.ThemeLabel.Location = new System.Drawing.Point(199, 26);
+            this.ThemeLabel.Name = "ThemeLabel";
+            this.ThemeLabel.Size = new System.Drawing.Size(44, 13);
+            this.ThemeLabel.TabIndex = 0;
+            this.ThemeLabel.Text = "Вопрос";
+            // 
+            // OkButton
+            // 
+            this.OkButton.Location = new System.Drawing.Point(202, 413);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(75, 23);
+            this.OkButton.TabIndex = 1;
+            this.OkButton.Text = "Ok";
+            this.OkButton.UseVisualStyleBackColor = true;
+            // 
+            // Q1Label
+            // 
+            this.Q1Label.AutoSize = true;
+            this.Q1Label.Location = new System.Drawing.Point(30, 140);
+            this.Q1Label.Name = "Q1Label";
+            this.Q1Label.Size = new System.Drawing.Size(43, 13);
+            this.Q1Label.TabIndex = 2;
+            this.Q1Label.Text = "Ответ1";
+            // 
+            // Q2Label
+            // 
+            this.Q2Label.AutoSize = true;
+            this.Q2Label.Location = new System.Drawing.Point(373, 140);
+            this.Q2Label.Name = "Q2Label";
+            this.Q2Label.Size = new System.Drawing.Size(43, 13);
+            this.Q2Label.TabIndex = 3;
+            this.Q2Label.Text = "Ответ2";
+            // 
+            // Q3Label
+            // 
+            this.Q3Label.AutoSize = true;
+            this.Q3Label.Location = new System.Drawing.Point(30, 301);
+            this.Q3Label.Name = "Q3Label";
+            this.Q3Label.Size = new System.Drawing.Size(43, 13);
+            this.Q3Label.TabIndex = 4;
+            this.Q3Label.Text = "Ответ3";
+            // 
+            // Q4Label
+            // 
+            this.Q4Label.AutoSize = true;
+            this.Q4Label.Location = new System.Drawing.Point(373, 301);
+            this.Q4Label.Name = "Q4Label";
+            this.Q4Label.Size = new System.Drawing.Size(43, 13);
+            this.Q4Label.TabIndex = 5;
+            this.Q4Label.Text = "Ответ4";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(340, 412);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // PassQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Q4Label);
+            this.Controls.Add(this.Q3Label);
+            this.Controls.Add(this.Q2Label);
+            this.Controls.Add(this.Q1Label);
+            this.Controls.Add(this.OkButton);
+            this.Controls.Add(this.ThemeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -42,9 +120,18 @@
             this.Text = "Пройти викторину";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PassQuiz_FormClosed);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label ThemeLabel;
+        private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.Label Q1Label;
+        private System.Windows.Forms.Label Q2Label;
+        private System.Windows.Forms.Label Q3Label;
+        private System.Windows.Forms.Label Q4Label;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -15,7 +15,7 @@ namespace QuizMaker
     {
         Greeting greeting;
         public static string path = @"";
-        int counter = 1;
+        int rightAnswer = 0;
         StreamReader reader = new StreamReader(path);
 
         public PassQuiz(Greeting greeting)
@@ -30,16 +30,15 @@ namespace QuizMaker
 
         private void PassQuiz_Load(object sender, EventArgs e)
         {
-            QuestionLoader(1);
+            QuestionLoader();
         }
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            QuestionLoader(counter);
-            counter++;
+            QuestionLoader();    
         }
 
-        private void QuestionLoader(int i)
+        private void QuestionLoader()
         {
             
             while (!reader.EndOfStream)
@@ -73,7 +72,9 @@ namespace QuizMaker
                 }
                 else if (s_line.StartsWith("*!"))
                 {
-
+                    s_line = s_line.Substring(2);
+                    rightAnswer = Convert.ToInt32(s_line);
+                    
                 }
                 else if (s_line.StartsWith("==="))
                 {

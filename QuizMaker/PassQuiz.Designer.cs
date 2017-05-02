@@ -39,7 +39,7 @@
             // ThemeLabel
             // 
             this.ThemeLabel.AutoSize = true;
-            this.ThemeLabel.Location = new System.Drawing.Point(199, 26);
+            this.ThemeLabel.Location = new System.Drawing.Point(218, 55);
             this.ThemeLabel.Name = "ThemeLabel";
             this.ThemeLabel.Size = new System.Drawing.Size(44, 13);
             this.ThemeLabel.TabIndex = 0;
@@ -58,7 +58,7 @@
             // Q1Label
             // 
             this.Q1Label.AutoSize = true;
-            this.Q1Label.Location = new System.Drawing.Point(30, 140);
+            this.Q1Label.Location = new System.Drawing.Point(96, 144);
             this.Q1Label.Name = "Q1Label";
             this.Q1Label.Size = new System.Drawing.Size(43, 13);
             this.Q1Label.TabIndex = 2;
@@ -67,7 +67,7 @@
             // Q2Label
             // 
             this.Q2Label.AutoSize = true;
-            this.Q2Label.Location = new System.Drawing.Point(373, 140);
+            this.Q2Label.Location = new System.Drawing.Point(96, 218);
             this.Q2Label.Name = "Q2Label";
             this.Q2Label.Size = new System.Drawing.Size(43, 13);
             this.Q2Label.TabIndex = 3;
@@ -76,7 +76,7 @@
             // Q3Label
             // 
             this.Q3Label.AutoSize = true;
-            this.Q3Label.Location = new System.Drawing.Point(30, 301);
+            this.Q3Label.Location = new System.Drawing.Point(96, 292);
             this.Q3Label.Name = "Q3Label";
             this.Q3Label.Size = new System.Drawing.Size(43, 13);
             this.Q3Label.TabIndex = 4;
@@ -85,7 +85,7 @@
             // Q4Label
             // 
             this.Q4Label.AutoSize = true;
-            this.Q4Label.Location = new System.Drawing.Point(373, 301);
+            this.Q4Label.Location = new System.Drawing.Point(96, 356);
             this.Q4Label.Name = "Q4Label";
             this.Q4Label.Size = new System.Drawing.Size(43, 13);
             this.Q4Label.TabIndex = 5;

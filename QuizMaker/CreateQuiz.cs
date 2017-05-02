@@ -55,6 +55,7 @@ namespace QuizMaker
                 {
                     File.SetAttributes(path, FileAttributes.Normal);
                     File.Move(path, @"c:\Quiz\" + value + ".txt");
+                    
                     this.Close();
                 }
                 catch (IOException)
@@ -98,7 +99,7 @@ namespace QuizMaker
                 sw.WriteLine("3!" + choice3.Text);
                 sw.WriteLine("4!" + choice4.Text);
                 sw.WriteLine("*!" + GetResult());
-                sw.WriteLine("===\n");
+                sw.WriteLine("===");
                 topic.Clear();
                 choice1.Clear();
                 choice2.Clear();

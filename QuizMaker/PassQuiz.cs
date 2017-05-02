@@ -16,6 +16,7 @@ namespace QuizMaker
         Greeting greeting;
         public static string path = @"";
         int counter = 1;
+        StreamReader reader = new StreamReader(path);
 
         public PassQuiz(Greeting greeting)
         {
@@ -40,7 +41,7 @@ namespace QuizMaker
 
         private void QuestionLoader(int i)
         {
-            StreamReader reader = new StreamReader(path);
+            
             while (!reader.EndOfStream)
             {
                 //str += reader.ReadLine();
@@ -76,7 +77,7 @@ namespace QuizMaker
                 }
                 else if (s_line.StartsWith("==="))
                 {
-                    Console.WriteLine("STOOOOOOP!");
+                    break;
                 }
             }
         }

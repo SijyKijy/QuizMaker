@@ -62,6 +62,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "ОК";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Results
             // 
@@ -73,6 +74,7 @@
             this.Controls.Add(this.resultsBox);
             this.Name = "Results";
             this.Text = "Ваши результаты";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Results_FormClosed);
             this.Load += new System.EventHandler(this.Results_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

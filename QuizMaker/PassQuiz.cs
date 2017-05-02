@@ -17,9 +17,10 @@ namespace QuizMaker
         public static string path = @"";
         int rightAnswer = 0;
         int userAnswer = 0;
-        int counter = 1;
+        int counter = 0;
         public static double rightRatio = 0;
         bool canRead = true;
+        bool isOpened = false;
         StreamReader reader = new StreamReader(path);
         FileInfo result = new FileInfo(@"C:\Quiz\result.txt");
 
@@ -30,12 +31,16 @@ namespace QuizMaker
         }
         private void PassQuiz_FormClosed(object sender, FormClosedEventArgs e)
         {
-            greeting.Show();
-        }   
+            if (isOpened == false)
+            {
+                greeting.Show();
+            }
+
+        }
 
         private void PassQuiz_Load(object sender, EventArgs e)
         {
-            QuestionLoader();      
+            QuestionLoader();
         }
 
         private void OkButton_Click(object sender, EventArgs e)
@@ -43,28 +48,34 @@ namespace QuizMaker
             Checker();
             CompareAnswers(rightAnswer);
             counter++;
-            
+
             if (canRead)
-            { 
+            {
                 QuestionLoader();
             }
             else
             {
-                /*     Form s = new Results();
-                     s.Show();
-                     this.Close();
                 rightRatio = rightRatio / Convert.ToDouble(counter) * 100;
-                */
+                rightRatio = Math.Round(rightRatio);
+                Form s = new Results(greeting);
+                s.Show();
+                isOpened = true;
                 this.Close();
+
             }
-            
+            answ1.Checked = false;
+            answ2.Checked = false;
+            answ3.Checked = false;
+            answ4.Checked = false;
+
         }
 
         private void QuestionLoader()
         {
-            
+
             while (!reader.EndOfStream)
             {
+
                 string s_line = reader.ReadLine();
                 if (s_line.StartsWith("?"))
                 {
@@ -95,21 +106,21 @@ namespace QuizMaker
                 {
                     s_line = s_line.Substring(2);
                     rightAnswer = Convert.ToInt32(s_line);
-                    
+
                 }
-                
+
                 else if (s_line.StartsWith("==="))
                 {
                     break;
-                }    
+                }
 
             }
-            
+
         }
 
         private void CompareAnswers(int s)
         {
-            
+
             if (answ1.Checked)
             {
                 userAnswer = 1;
@@ -144,18 +155,18 @@ namespace QuizMaker
                     sw.Close();
                 }
             }
-            
-            
+
+
 
         }
         private void Checker()
         {
-            if(reader.EndOfStream)
+            if (reader.EndOfStream)
             {
                 canRead = false;
             }
         }
 
-        
+
     }
 }

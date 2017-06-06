@@ -42,6 +42,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.AddQuiz = new System.Windows.Forms.Button();
+            this.Var1T = new System.Windows.Forms.RadioButton();
+            this.Var2T = new System.Windows.Forms.RadioButton();
+            this.Var3T = new System.Windows.Forms.RadioButton();
+            this.Var4T = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // choice1
@@ -145,11 +149,56 @@
             this.AddQuiz.UseVisualStyleBackColor = true;
             this.AddQuiz.Click += new System.EventHandler(this.AddQuiz_Click);
             // 
+            // Var1T
+            // 
+            this.Var1T.AutoSize = true;
+            this.Var1T.Checked = true;
+            this.Var1T.Location = new System.Drawing.Point(444, 91);
+            this.Var1T.Name = "Var1T";
+            this.Var1T.Size = new System.Drawing.Size(14, 13);
+            this.Var1T.TabIndex = 14;
+            this.Var1T.TabStop = true;
+            this.Var1T.UseVisualStyleBackColor = true;
+            // 
+            // Var2T
+            // 
+            this.Var2T.AutoSize = true;
+            this.Var2T.Location = new System.Drawing.Point(444, 137);
+            this.Var2T.Name = "Var2T";
+            this.Var2T.Size = new System.Drawing.Size(14, 13);
+            this.Var2T.TabIndex = 15;
+            this.Var2T.TabStop = true;
+            this.Var2T.UseVisualStyleBackColor = true;
+            // 
+            // Var3T
+            // 
+            this.Var3T.AutoSize = true;
+            this.Var3T.Location = new System.Drawing.Point(444, 183);
+            this.Var3T.Name = "Var3T";
+            this.Var3T.Size = new System.Drawing.Size(14, 13);
+            this.Var3T.TabIndex = 16;
+            this.Var3T.TabStop = true;
+            this.Var3T.UseVisualStyleBackColor = true;
+            // 
+            // Var4T
+            // 
+            this.Var4T.AutoSize = true;
+            this.Var4T.Location = new System.Drawing.Point(444, 228);
+            this.Var4T.Name = "Var4T";
+            this.Var4T.Size = new System.Drawing.Size(14, 13);
+            this.Var4T.TabIndex = 17;
+            this.Var4T.TabStop = true;
+            this.Var4T.UseVisualStyleBackColor = true;
+            // 
             // CreateQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 332);
+            this.Controls.Add(this.Var4T);
+            this.Controls.Add(this.Var3T);
+            this.Controls.Add(this.Var2T);
+            this.Controls.Add(this.Var1T);
             this.Controls.Add(this.AddQuiz);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -188,5 +237,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button AddQuiz;
+        private System.Windows.Forms.RadioButton Var1T;
+        private System.Windows.Forms.RadioButton Var2T;
+        private System.Windows.Forms.RadioButton Var3T;
+        private System.Windows.Forms.RadioButton Var4T;
     }
 }

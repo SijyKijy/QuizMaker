@@ -12,7 +12,8 @@ namespace QuizMaker
 {
     public partial class Greeting : Form
     {
-        public int kek = 1;
+         
+        public static OpenFileDialog Ofd = new OpenFileDialog { Filter = "Текстовые файлы|*.txt" };
         public Greeting()
         {
             InitializeComponent();
@@ -20,9 +21,23 @@ namespace QuizMaker
 
         private void GoQuizButton_Click(object sender, EventArgs e)
         {
-            Form f = new PassQuiz(this);
-            f.Show();
-            this.Hide();
+            
+            
+            Ofd.ShowDialog();
+            PassQuiz.path = Ofd.FileName;
+            try
+            {
+                if (Ofd.FileName != null)
+                {
+                    Form f = new PassQuiz(this);
+                    f.Show();
+                    this.Hide();
+                }
+            }
+            catch (ArgumentException)
+            {
+
+            }
         }
 
         private void CreateQuizButto_Click(object sender, EventArgs e)

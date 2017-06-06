@@ -28,9 +28,15 @@ namespace QuizMaker
             // Создание директории и файла для редактирования.
             DirectoryInfo dir = new DirectoryInfo(@"C:\");
             dir.CreateSubdirectory("Quiz");
-            using (StreamWriter sw = File.CreateText(path))
+            try
             {
-                File.SetAttributes(path, FileAttributes.Hidden);
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    File.SetAttributes(path, FileAttributes.Hidden);
+                }
+            }
+            catch (UnauthorizedAccessException)
+            {
             }
         }
 
@@ -49,6 +55,7 @@ namespace QuizMaker
                 {
                     File.SetAttributes(path, FileAttributes.Normal);
                     File.Move(path, @"c:\Quiz\" + value + ".txt");
+                    
                     this.Close();
                 }
                 catch (IOException)
@@ -61,14 +68,38 @@ namespace QuizMaker
                 }
             }
         }
-
+        private int GetResult()
+        {
+            if (Var1T.Checked == true)
+            {
+                return (1);
+            }
+            else if(Var2T.Checked == true)
+            {
+                return (2);
+            }
+            else if (Var3T.Checked == true)
+            {
+                return (3);
+            }
+            else if (Var4T.Checked == true)
+            {
+                return (4);
+            }
+            return 0;
+        }
         private void AddQuiz_Click(object sender, EventArgs e)
         {
             // Добавление текста.
             using (StreamWriter sw = File.AppendText(path))
             {
-                sw.WriteLine(topic.Text + " ^ " + choice1.Text + " ^ " + choice2.Text + " ^ " + choice3.Text + " ^ " + choice4.Text + " _#");
-                sw.WriteLine("===\n");
+                sw.WriteLine("?" + topic.Text);
+                sw.WriteLine("1!" + choice1.Text);
+                sw.WriteLine("2!" + choice2.Text);
+                sw.WriteLine("3!" + choice3.Text);
+                sw.WriteLine("4!" + choice4.Text);
+                sw.WriteLine("*!" + GetResult());
+                sw.WriteLine("===");
                 topic.Clear();
                 choice1.Clear();
                 choice2.Clear();

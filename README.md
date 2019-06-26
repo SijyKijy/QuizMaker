@@ -1,2 +1,2 @@
 # | QuizMaker |
-## Make your dream test!
+### Make your dream test!

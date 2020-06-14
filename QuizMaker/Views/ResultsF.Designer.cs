@@ -1,6 +1,6 @@
-﻿namespace QuizMaker
+﻿namespace QuizMaker.Views
 {
-    partial class Results
+    partial class ResultsF
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@
             this.percentage.Location = new System.Drawing.Point(38, 249);
             this.percentage.Name = "percentage";
             this.percentage.Size = new System.Drawing.Size(137, 61);
-            this.percentage.TabIndex = 1;
+            this.percentage.TabIndex = 0;
             this.percentage.Text = "label1";
             // 
             // button1
@@ -59,10 +59,10 @@
             this.button1.Location = new System.Drawing.Point(273, 275);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 0;
             this.button1.Text = "ОК";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // Results
             // 

@@ -1,6 +1,6 @@
-﻿namespace QuizMaker
+﻿namespace QuizMaker.Views
 {
-    partial class PassQuiz
+    partial class PassQuizF
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@
             this.OkButton.Location = new System.Drawing.Point(202, 413);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(75, 23);
-            this.OkButton.TabIndex = 1;
+            this.OkButton.TabIndex = 0;
             this.OkButton.Text = "Ok";
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
@@ -61,7 +61,7 @@
             this.answ1.Location = new System.Drawing.Point(42, 153);
             this.answ1.Name = "answ1";
             this.answ1.Size = new System.Drawing.Size(14, 13);
-            this.answ1.TabIndex = 6;
+            this.answ1.TabIndex = 0;
             this.answ1.TabStop = true;
             this.answ1.UseVisualStyleBackColor = true;
             // 
@@ -71,7 +71,7 @@
             this.answ2.Location = new System.Drawing.Point(42, 213);
             this.answ2.Name = "answ2";
             this.answ2.Size = new System.Drawing.Size(14, 13);
-            this.answ2.TabIndex = 6;
+            this.answ2.TabIndex = 0;
             this.answ2.TabStop = true;
             this.answ2.UseVisualStyleBackColor = true;
             // 
@@ -81,7 +81,7 @@
             this.answ3.Location = new System.Drawing.Point(42, 280);
             this.answ3.Name = "answ3";
             this.answ3.Size = new System.Drawing.Size(14, 13);
-            this.answ3.TabIndex = 6;
+            this.answ3.TabIndex = 0;
             this.answ3.TabStop = true;
             this.answ3.UseVisualStyleBackColor = true;
             // 
@@ -91,7 +91,7 @@
             this.answ4.Location = new System.Drawing.Point(42, 335);
             this.answ4.Name = "answ4";
             this.answ4.Size = new System.Drawing.Size(14, 13);
-            this.answ4.TabIndex = 6;
+            this.answ4.TabIndex = 0;
             this.answ4.TabStop = true;
             this.answ4.UseVisualStyleBackColor = true;
             // 
@@ -110,7 +110,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PassQuiz";
-            this.Text = Greeting.Ofd.FileName;
+            //this.Text = Greeting.ofd.FileName;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PassQuiz_FormClosed);
             this.Load += new System.EventHandler(this.PassQuiz_Load);
             this.ResumeLayout(false);

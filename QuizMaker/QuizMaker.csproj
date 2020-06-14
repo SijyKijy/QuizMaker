@@ -46,42 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateQuiz.cs">
+    <Compile Include="Contollers\FormController.cs" />
+    <Compile Include="Contollers\GreetingController.cs" />
+    <Compile Include="Contollers\CreateQuizController.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Quiz.cs" />
+    <Compile Include="Views\CreateQuizF.cs">
       <SubType>Form</SubType>
       <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
     </Compile>
-    <Compile Include="CreateQuiz.Designer.cs">
-      <DependentUpon>CreateQuiz.cs</DependentUpon>
+    <Compile Include="Views\CreateQuizF.Designer.cs">
+      <DependentUpon>CreateQuizF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Greeting.cs">
+    <Compile Include="Views\GreetingF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Greeting.Designer.cs">
-      <DependentUpon>Greeting.cs</DependentUpon>
+    <Compile Include="Views\GreetingF.Designer.cs">
+      <DependentUpon>GreetingF.cs</DependentUpon>
     </Compile>
-    <Compile Include="InputBoxClass.cs" />
-    <Compile Include="PassQuiz.cs">
+    <Compile Include="Views\InputBoxClass.cs" />
+    <Compile Include="Views\PassQuizF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PassQuiz.Designer.cs">
-      <DependentUpon>PassQuiz.cs</DependentUpon>
+    <Compile Include="Views\PassQuizF.Designer.cs">
+      <DependentUpon>PassQuizF.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Results.cs">
+    <Compile Include="Views\ResultsF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Results.Designer.cs">
-      <DependentUpon>Results.cs</DependentUpon>
+    <Compile Include="Views\ResultsF.Designer.cs">
+      <DependentUpon>ResultsF.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CreateQuiz.resx">
-      <DependentUpon>CreateQuiz.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CreateQuizF.resx">
+      <DependentUpon>CreateQuizF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Greeting.resx">
-      <DependentUpon>Greeting.cs</DependentUpon>
+    <EmbeddedResource Include="Views\GreetingF.resx">
+      <DependentUpon>GreetingF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PassQuiz.resx">
-      <DependentUpon>PassQuiz.cs</DependentUpon>
+    <EmbeddedResource Include="Views\PassQuizF.resx">
+      <DependentUpon>PassQuizF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,8 +98,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Results.resx">
-      <DependentUpon>Results.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ResultsF.resx">
+      <DependentUpon>ResultsF.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
     <None Include="Properties\Settings.settings">

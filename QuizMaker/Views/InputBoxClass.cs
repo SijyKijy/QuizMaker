@@ -1,9 +1,9 @@
-﻿using System.Windows.Forms;
-using System.Drawing;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
-namespace QuizMaker
+namespace QuizMaker.Views
 {
-    class InputBoxClass
+    internal static class InputBoxClass
     {
         public static DialogResult InputBox(string title, string promptText, ref string value)
         {
@@ -28,7 +28,7 @@ namespace QuizMaker
             buttonCancel.SetBounds(309, 72, 75, 23);
 
             label.AutoSize = true;
-            textBox.Anchor = textBox.Anchor | AnchorStyles.Right;
+            textBox.Anchor |= AnchorStyles.Right;
             buttonOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 

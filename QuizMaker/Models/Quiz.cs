@@ -8,9 +8,9 @@ namespace QuizMaker.Models
     {
         public string Title { get; }
         public List<Question> Questions { get; }
-        public int RightQuestion { get; }
+        public string RightQuestion { get; }
 
-        public Quiz(string title, List<Question> questions, int rightQuestion)
+        public Quiz(string title, List<Question> questions, string rightQuestion)
         {
             Title = title;
             Questions = questions;

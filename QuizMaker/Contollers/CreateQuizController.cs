@@ -15,11 +15,11 @@ namespace QuizMaker.Contollers
         private readonly CreateQuizF _initF;
         private readonly Form _previousF;
 
-        internal CreateQuizController(CreateQuizF init, Form previous) : base(init)
+        internal CreateQuizController(CreateQuizF initForm, Form previous) : base(initForm)
         {
             _quiz = new List<Quiz>();
 
-            _initF = init;
+            _initF = initForm;
             _previousF = previous;
         }
 
@@ -36,8 +36,8 @@ namespace QuizMaker.Contollers
             {
                 try
                 {
-                    Directory.CreateDirectory("Quiz");
-                    using (FileStream fs = new FileStream($"Quiz/{quizName}.qm", FileMode.Create))
+                    Directory.CreateDirectory(Properties.Settings.Default.FolderName);
+                    using (FileStream fs = new FileStream($"{Properties.Settings.Default.FolderName}/{quizName}.qm", FileMode.Create))
                         new BinaryFormatter().Serialize(fs, _quiz);
 
                     MessageBox.Show("Викторина сохранена!", "Готово!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -60,7 +60,7 @@ namespace QuizMaker.Contollers
 
         public void AddQuiz()
         {
-            int rightQuestion = default;
+            string rightQuestion = default;
             string title = default;
             List<Question> questions = new List<Question>();
 
@@ -87,7 +87,7 @@ namespace QuizMaker.Contollers
                 }
 
                 if ((component is RadioButton rb) && rb.Checked && (string)rb.Tag == "Option") // Кнопки ответа
-                    rightQuestion = Convert.ToInt32(rb.AccessibleName);
+                    rightQuestion = rb.AccessibleName;
             }
 
             _quiz.Add(new Quiz(title, questions, rightQuestion)); // Добавляем всё в коллекцию викторин

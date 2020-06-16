@@ -30,7 +30,7 @@
         {
             this.resultsBox = new System.Windows.Forms.RichTextBox();
             this.percentage = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.OKBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // resultsBox
@@ -54,25 +54,25 @@
             this.percentage.TabIndex = 0;
             this.percentage.Text = "label1";
             // 
-            // button1
+            // OKBtn
             // 
-            this.button1.Location = new System.Drawing.Point(273, 275);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "ОК";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            this.OKBtn.Location = new System.Drawing.Point(273, 275);
+            this.OKBtn.Name = "OKBtn";
+            this.OKBtn.Size = new System.Drawing.Size(75, 23);
+            this.OKBtn.TabIndex = 0;
+            this.OKBtn.Text = "ОК";
+            this.OKBtn.UseVisualStyleBackColor = true;
+            this.OKBtn.Click += new System.EventHandler(this.OKBtn_Click);
             // 
-            // Results
+            // ResultsF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(381, 319);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.OKBtn);
             this.Controls.Add(this.percentage);
             this.Controls.Add(this.resultsBox);
-            this.Name = "Results";
+            this.Name = "ResultsF";
             this.Text = "Ваши результаты";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Results_FormClosed);
             this.Load += new System.EventHandler(this.Results_Load);
@@ -85,6 +85,6 @@
 
         private System.Windows.Forms.RichTextBox resultsBox;
         private System.Windows.Forms.Label percentage;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button OKBtn;
     }
 }

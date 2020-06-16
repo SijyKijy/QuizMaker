@@ -6,14 +6,12 @@ namespace QuizMaker.Contollers
     {
         private readonly Form _initF;
 
-        internal FormController(Form init)
-        {
-            _initF = init;
-        }
+        internal FormController(Form initForm) => _initF = initForm;
 
-        public void OpenForm(Form openForm)
+        public void OpenForm(Form openForm, bool isMain = false)
         {
-            _initF.Hide();
+            if (isMain) _initF.Hide();
+            else _initF.Close();
             openForm.Show();
         }
 

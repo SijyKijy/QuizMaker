@@ -49,6 +49,7 @@
     <Compile Include="Contollers\FormController.cs" />
     <Compile Include="Contollers\GreetingController.cs" />
     <Compile Include="Contollers\CreateQuizController.cs" />
+    <Compile Include="Contollers\PassQuizController.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Views\CreateQuizF.cs">

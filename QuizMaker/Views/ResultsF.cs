@@ -1,48 +1,29 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 
 namespace QuizMaker.Views
 {
     public partial class ResultsF : Form
     {
-        private readonly GreetingF _greeting;
+        private readonly double _result;
+        private readonly string _answerLog;
 
-        public ResultsF(GreetingF greeting)
+        public ResultsF(double result, string answerLog)
         {
             InitializeComponent();
-            _greeting = greeting;
+
+            _result = result;
+            _answerLog = answerLog;
         }
 
-        private void Results_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            _greeting.Show();
-        }
+        private void Results_FormClosed(object sender, FormClosedEventArgs e) => GreetingF.GetForm().Show();
 
         private void Results_Load(object sender, EventArgs e)
         {
-            percentage.Text = Convert.ToString(PassQuizF.RightRatio) + "%";
-            StreamReader sr = new StreamReader(@"C:\Quiz\result.txt");
-            string line;
-            while (!sr.EndOfStream)
-            {
-                line = sr.ReadLine();
-                resultsBox.AppendText(line + "\n");
-            }
-            sr.Close();
-            File.Delete(@"C:\Quiz\result.txt");
+            percentage.Text = $"{Math.Round(_result, 0)}%";
+            resultsBox.Text = _answerLog;
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            _greeting.Show();
-            Close();
-        }
-
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-            _greeting.Show();
-            Close();
-        }
+        private void OKBtn_Click(object sender, EventArgs e) => Close();
     }
 }

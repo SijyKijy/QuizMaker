@@ -240,6 +240,7 @@
             this.MinimizeBox = false;
             this.Name = "CreateQuizF";
             this.Text = "Создать викторину";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateQuizF_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

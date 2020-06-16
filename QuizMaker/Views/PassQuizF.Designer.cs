@@ -57,45 +57,45 @@
             // 
             // answ1
             // 
+            this.answ1.AccessibleName = "1";
             this.answ1.AutoSize = true;
             this.answ1.Location = new System.Drawing.Point(42, 153);
             this.answ1.Name = "answ1";
             this.answ1.Size = new System.Drawing.Size(14, 13);
             this.answ1.TabIndex = 0;
-            this.answ1.TabStop = true;
             this.answ1.UseVisualStyleBackColor = true;
             // 
             // answ2
             // 
+            this.answ2.AccessibleName = "2";
             this.answ2.AutoSize = true;
             this.answ2.Location = new System.Drawing.Point(42, 213);
             this.answ2.Name = "answ2";
             this.answ2.Size = new System.Drawing.Size(14, 13);
             this.answ2.TabIndex = 0;
-            this.answ2.TabStop = true;
             this.answ2.UseVisualStyleBackColor = true;
             // 
             // answ3
             // 
+            this.answ3.AccessibleName = "3";
             this.answ3.AutoSize = true;
             this.answ3.Location = new System.Drawing.Point(42, 280);
             this.answ3.Name = "answ3";
             this.answ3.Size = new System.Drawing.Size(14, 13);
             this.answ3.TabIndex = 0;
-            this.answ3.TabStop = true;
             this.answ3.UseVisualStyleBackColor = true;
             // 
             // answ4
             // 
+            this.answ4.AccessibleName = "4";
             this.answ4.AutoSize = true;
             this.answ4.Location = new System.Drawing.Point(42, 335);
             this.answ4.Name = "answ4";
             this.answ4.Size = new System.Drawing.Size(14, 13);
             this.answ4.TabIndex = 0;
-            this.answ4.TabStop = true;
             this.answ4.UseVisualStyleBackColor = true;
             // 
-            // PassQuiz
+            // PassQuizF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,8 +109,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "PassQuiz";
-            //this.Text = Greeting.ofd.FileName;
+            this.Name = "PassQuizF";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PassQuiz_FormClosed);
             this.Load += new System.EventHandler(this.PassQuiz_Load);
             this.ResumeLayout(false);
